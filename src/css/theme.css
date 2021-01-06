@@ -1,0 +1,173 @@
+/*super css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+    --deliveryColor: #f59816;
+    --managementColor: #16f582;
+    --adminColor: #26a9eb;
+    --sysAdminColor:#5be3d3;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+}
+/*header bar*/
+header{
+    position: sticky;
+    top: 0;
+
+    height: 56px;
+
+    background-color: #1a1a1a;
+    color: whitesmoke;
+
+}
+.heading{
+    border-radius: 6px;
+    border-style: none;
+
+    height: 36px;
+    font-size: 20px;
+
+    background-color: rgb(34, 34, 34);
+    color:whitesmoke
+
+}
+
+#logo{
+    float: left;
+    margin-top: 10px;
+    margin-left: 7%;
+}
+#logo:hover{
+    transition-duration: 0.4s;
+    background-color: whitesmoke;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+#appTitle{
+    margin-left: 8%;
+    margin-top: 10px;
+}
+#userTitle{
+    float: right;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+
+#logout{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+
+    width: 34px;
+    padding-bottom: 2px;
+}
+#logout:hover{
+    transition-duration: 0.4s;
+    background-color: whitesmoke;
+    color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+/*side nav bar styling*/
+
+aside {
+    position: fixed;
+
+    float: left;
+    width: 18%;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    background-color: rgb(90, 90, 90);
+
+}
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+}
+aside button {
+    height: 36px;
+    width: 90%;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+        
+    border-radius: 6px;
+    border-style: none;
+
+    background-color: rgb(82, 82, 82);
+    transition-duration: 0.5s;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+/*Active button class styling*/
+
+    aside .active:hover{
+        background-color: rgb(34, 34, 34);
+        cursor: pointer;
+    }
+
+    aside .delivery:hover{
+        color: var(--deliveryColor);
+    }
+    aside .management:hover{
+        color: var(--managementColor);
+    }
+    aside .administration:hover{
+        color: var(--adminColor);
+    }
+    aside .sysAdministration:hover{
+        color: var(--sysAdminColor);
+    }
+
+/*button headings*/
+
+    aside .headingBtn {
+        color: black;
+    }
+
+    aside .deliverHead {
+        background-color:var(--deliveryColor);
+    }
+    aside .manageHead {
+        background-color: var(--managementColor);
+    }
+    aside .adminHead {
+        background-color:var(--adminColor);
+    }
+    aside .sysAdminHead {
+        background-color:var(--sysAdminColor);
+    }
+
+/*end of nav and start of content area*/
+
+#content {
+    width: 75%;
+    height: 100vh;
+
+    margin-left: 250px;
+    margin-right: 50px;
+
+}
+
+#content #contentHeading{
+    margin-top: 5px;
+    margin-left: 35%;
+
+    width: 200px;
+}
+
