@@ -13,7 +13,7 @@
     <body>
         
         <header>  
-            <button class="heading" id="logo"> &#127968; </button>
+            <button data-tab-menu="dashboardTab" class="heading activeTabBtn" id="logo"> &#127968; </button>
             <button disabled class="heading" id="appTitle"> Courier Manager System </button>
             <button class="heading" id="logout"> x </button>
             <button disabled class="heading" id="userTitle"> Admin: Justin Jenecke </button>
@@ -22,38 +22,171 @@
         <aside>
             
             <ul>
-                <li><button disabled class="headingBtn deliverHead"> Delivery </button></li>
-                <li><button class="delivery active"> Create Delivery </button></li>
+                <li><button disabled class="headingBtn deliverHead">Delivery</button> </li>
 
-                <li><button disabled class="headingBtn manageHead"> Management </button></li>
-                <li><button class="management active"> Employee Management </button></li>
-                <li><button class="management active"> Vehicle Management </button></li>
-                <li><button class="management active"> Device Management </button></li>
+                <li> 
+                    <button data-tab-menu="createDeliveryTab" class="delivery active"> 
+                        Create Delivery 
+                    </button>
+                </li>
+
+                <li><button disabled class="headingBtn manageHead">Management</button> </li>
+
+                <li> 
+                    <button data-tab-menu="manageEmployeesTab" class="management active"> 
+                        Employee Management 
+                    </button>
+                </li>
+                <li> 
+                    <button data-tab-menu="manageVehiclesTab" class="management active"> 
+                        Vehicle Management 
+                    </button>
+                </li>                
+                <li> 
+                    <button data-tab-menu="manageDevicesTab" class="management active"> 
+                        Device Management 
+                    </button>
+                </li>
 
                 <li><button disabled class="headingBtn adminHead"> Administration </button></li>
-                <li><button class="administration active"> Employee Administration </button></li>   
+
+                <li> 
+                    <button data-tab-menu="employeeAdminTab" class="administration active"> 
+                        Employee Administration 
+                    </button>
+                </li>   
                 <li><button disabled class="headingBtn sysAdminHead"> System Administration </button></li>
-                <li><button class="sysAdministration active"> HR Admin </button></li>
-                <li><button class="sysAdministration active"> Report Admin </button></li>
+
+                <li> 
+                    <button data-tab-menu="humanResourceAdminTab" class="sysAdministration active"> 
+                        HR Admin 
+                    </button>
+                </li>
+                <li> 
+                    <button data-tab-menu="reportAdminTab" class="sysAdministration active"> 
+                        Report Admin 
+                    </button>
+                </li>
             </ul>
             
         </aside>
 
+        <br> 
+
         <div id="content">
+       
+            <!---->
+
+            <div class="contentTab activeContentTab" id="dashboard" data-tab="dashboardTab" data-script="index.js">
+
+                <table border="solid" id="activeDeliveryTable">
+                    <caption>Deliveries</caption>
+                        
+                    <thead>
+                        <tr>
+                            <th>deliveryId</th>
+                            <th>driverId</th>
+                            <th>driverName</th>
+                            <th>vehicleId</th>
+                            <th>route</th> 
+                            <th>distance</th>
+                            <th></th>
+                        </tr> 
+                    </thead > 
+                        
+                    <tbody id="adTableBody">
+        
+                    </tbody>
+                </table>
+
+            </div>
+
+            <!---->
+
+            <div class="contentTab" id="createDelivery" data-tab="createDeliveryTab">
+                Deliveries
+            </div>
             
-            <button disabled class ="heading" id="contentHeading" > Content Heading </button>
+            <!---->
+            
+            <div class="contentTab" id="manageEmployees" data-tab="manageEmployeesTab">
+                <table border="solid" id="employeeTable">
+                    <caption>Employees</caption>
+                    
+                    <thead id="employeeTableHead">
+                        <tr>
+                            <th>Id:</th>
+                            <th>Fname:</th>
+                            <th>Lname:</th>
+                            <th>Email:</th> 
+                            <th>Phone:</th>
+                            <th>DOB:</th>
+                            <th>Licence:</th>
+                        </tr> 
+                    </thead >                    
+                    <tbody id="employeeTableBody">
+    
+                    </tbody>
+                </table>
+    
+               <!--<script src="src/js/manageEmployees.js"></script>-->
+    
+            </div>
+            
+            <!---->
+            
+            <div class="contentTab" id="manageVehicles" data-tab="manageVehiclesTab">
+                mVehicles
+            </div>
 
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam culpa quam cum obcaecati sapiente ut. Impedit harum adipisci, pariatur eaque minima quaerat optio. Dolorum ratione ipsa facilis quasi sapiente.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magnam praesentium ab quasi eaque odio, corrupti ut voluptate sed voluptatem, voluptatibus labore inventore sunt blanditiis, dolores cum consectetur a illum!
-            </p>
+            <!---->
+            
+            <div class="contentTab" id="manageDevices" data-tab="manageDevicesTab">
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur numquam culpa quam cum obcaecati sapiente ut. Impedit harum adipisci, pariatur eaque minima quaerat optio. Dolorum ratione ipsa facilis quasi sapiente.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magnam praesentium ab quasi eaque odio, corrupti ut voluptate sed voluptatem, voluptatibus labore inventore sunt blanditiis, dolores cum consectetur a illum!
-            </p>                     
+                    <table border="solid" id="deviceTable">
+
+                    <caption>Devices</caption>
+                        
+                    <thead>
+                        <tr>
+                            <th>deviceId</th>
+                            <th>model</th>
+                            <th>manufacturer</th>
+                            <th>value</th>
+                            <th>depreciatedValue</th> 
+                        </tr> 
+                    </thead > 
+                        
+                    <tbody id="deviceTableBody">
+        
+                    </tbody>
+                </table>
+
+            </div>
+
+            <!---->
+            
+            <div class="contentTab" id="employeeAdmin" data-tab="employeeAdminTab">
+                aEmployee
+            </div>
+            
+            <!---->
+            
+            <div class="contentTab" id="humanResourceAdmin" data-tab="humanResourceAdminTab">
+                aHr
+            </div>
+
+            <!---->
+            
+            <div class="contentTab" id="reportAdmin" data-tab="reportAdminTab">
+                aRep
+            </div>
+            
+            <!---->
                 
         </div>
+
+        <script src="src/js/index.js" defer></script>
 
     </body>
 

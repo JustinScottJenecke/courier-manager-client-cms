@@ -164,10 +164,20 @@ aside button {
 
 }
 
-#content #contentHeading{
-    margin-top: 5px;
-    margin-left: 35%;
-
-    width: 200px;
+.contentTab {
+    display: none;
 }
+
+.activeContentTab {
+    display: block;
+}
+
+.activeTabBtn {
+    background-color: rgb(34, 34, 34);
+    color:  whitesmoke;
+}
+
+
+
+
 
